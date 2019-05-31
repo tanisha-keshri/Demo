@@ -1,0 +1,20 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    {{ message }}
+    <button v-on:click="greet">Add</button>
+    <input v-model="message"/>
+    <ul>
+    <li v-for="tool in tools">
+      {{tool.text}}
+    </li>
+    </ul>
+    
+    <button v-on:click="say('hii');">Say Hi</button>
+    <button v-on:click="say('get lost!!');">Say get lost!</button>
+    <input v-model="newTool" v-on:keyup.enter="addTool" placeholder="enter new tool and press enter"/>
+    
+    <p v-if="flag">Click the below button and I will disappear :o</p>
+    <button v-on:click="flag = !flag">Click Mee!</button>
+</div>
+<script src="index.js"></script>
