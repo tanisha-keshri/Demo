@@ -2,19 +2,30 @@
 
 <div id="app">
     {{ message }}
-    <button v-on:click="greet">Add</button>
-    <input v-model="message"/>
+    <button v-on:click="greet">Add</button> <br/>
+    <input v-model="message"/> <br/>
+    <button v-on:click="say('hii');">Say Hi</button><br/>
+    <button v-on:click="say('get lost!!');">Say get lost!</button><br/>
+
     <ul>
     <li v-for="tool in tools">
       {{tool.text}}
     </li>
     </ul>
     
-    <button v-on:click="say('hii');">Say Hi</button>
-    <button v-on:click="say('get lost!!');">Say get lost!</button>
-    <input v-model="newTool" v-on:keyup.enter="addTool" placeholder="enter new tool and press enter"/>
+    <input v-model="newTool" v-on:keyup.enter="addTool" placeholder="enter new tool and press enter"/><br/>
     
-    <p v-if="flag">Click the below button and I will disappear :o</p>
-    <button v-on:click="flag = !flag">Click Mee!</button>
+    <p v-if="flag">Click the below button and I will disappear :o</p><br/>
+    <button v-on:click="flag = !flag">Click Mee!</button> <br/>
+    <my-component></my-component>
+    <blog-post title="Mehehe"></blog-post>
+    <blog-post title="Another title"></blog-post>
+
+    <blog-post v-for="tool in tools" v-bind:title="tool.text"></blog-post> 
 </div>
+
+<div id="extend-vue"></div>
+
+<script src="compoonentVue.js"></script>
 <script src="index.js"></script>
+<script src="extendvue.js"></script>

@@ -1,3 +1,5 @@
+// import hello from 'hello.vue';
+
 new Vue({ //binds the view and the model(data)
     el: '#app', // attaches with the dom with ID app 
     data: {     // all the data is defined in this secction
